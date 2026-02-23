@@ -13,15 +13,56 @@ st.set_page_config(page_title="Antenna Simulator", layout="wide", page_icon="�
 # ============================================================
 st.markdown("""
 <style>
+
+/* App background */
 .stApp {
     background: radial-gradient(circle at center, #0c2d65 0%, #000000 90%);
-    color: #c9d1d9;
+    color: #ffffff !important;
     font-family: Consolas, monospace;
 }
-h1,h2,h3 { color:#60a5fa; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #60a5fa !important;
+}
+
+/* General text */
+p, span, label, div {
+    color: #ffffff !important;
+}
+
+/* Sidebar text */
+section[data-testid="stSidebar"] * {
+    color: #ffffff !important;
+}
+
+/* Tables */
+table {
+    color: white !important;
+    background-color: rgba(0,0,0,0.6) !important;
+}
+
+thead tr th {
+    background-color: #1f2937 !important;
+    color: #ffffff !important;
+}
+
+tbody tr td {
+    color: #ffffff !important;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    color: white !important;
+}
+
+/* Metrics & captions */
+.css-1v0mbdj, .css-1wivap2, .stCaption {
+    color: #ffffff !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
-
 # ============================================================
 # ANTENNA LIBRARY
 # ============================================================
@@ -226,21 +267,18 @@ st.pyplot(fig_nf)
 # ============================================================
 # REFERENCE TABLE
 # ============================================================
+
+import pandas as pd
+
 st.header("📚 Antenna Quick Reference")
 
-ref = [
-    ("Dipole","λ/2","2.15 dBi","TV, RF"),
-    ("Patch","λ/2","6–9 dBi","WiFi, GPS"),
-    ("Yagi","Multi","10–15 dBi","TV"),
-    ("Dish","Large","30+ dBi","Satellite"),
-    ("Horn","Large","10–25 dBi","Radar"),
-]
-
-st.table({
-    "Antenna":[r[0] for r in ref],
-    "Size":[r[1] for r in ref],
-    "Gain":[r[2] for r in ref],
-    "Applications":[r[3] for r in ref]
+ref_data = pd.DataFrame({
+    "Antenna": ["Dipole","Patch","Yagi","Dish","Horn"],
+    "Size": ["λ/2","λ/2","Multi","Large","Large"],
+    "Gain": ["2.15 dBi","6–9 dBi","10–15 dBi","30+ dBi","10–25 dBi"],
+    "Applications": ["TV, RF","WiFi, GPS","TV","Satellite","Radar"]
 })
+
+st.dataframe(ref_data, use_container_width=True)
 
 st.caption("Developed by Aditya Dass — Advanced RF Antenna Research Tool")
