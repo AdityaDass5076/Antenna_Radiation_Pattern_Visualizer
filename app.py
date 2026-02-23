@@ -21,34 +21,6 @@ st.markdown("""
 h1,h2,h3 { color:#60a5fa; }
 </style>
 """, unsafe_allow_html=True)
-
-/* Tables */
-table {
-    color: white !important;
-    background-color: rgba(0,0,0,0.6) !important;
-}
-
-thead tr th {
-    background-color: #1f2937 !important;
-    color: #ffffff !important;
-}
-
-tbody tr td {
-    color: #ffffff !important;
-}
-
-/* Dataframe */
-[data-testid="stDataFrame"] {
-    color: white !important;
-}
-
-/* Metrics & captions */
-.css-1v0mbdj, .css-1wivap2, .stCaption {
-    color: #ffffff !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
 # ============================================================
 # ANTENNA LIBRARY
 # ============================================================
