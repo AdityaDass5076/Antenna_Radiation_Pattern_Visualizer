@@ -13,28 +13,14 @@ st.set_page_config(page_title="Antenna Simulator", layout="wide", page_icon="ðŸ“
 # ============================================================
 st.markdown("""
 <style>
-
-/* App background */
 .stApp {
     background: radial-gradient(circle at center, #0c2d65 0%, #000000 90%);
-    color: #ffffff !important;
+    color: #c9d1d9;
     font-family: Consolas, monospace;
 }
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    color: #60a5fa !important;
-}
-
-/* General text */
-p, span, label, div {
-    color: #ffffff !important;
-}
-
-/* Sidebar text */
-section[data-testid="stSidebar"] * {
-    color: #ffffff !important;
-}
+h1,h2,h3 { color:#60a5fa; }
+</style>
+""", unsafe_allow_html=True)
 
 /* Tables */
 table {
