@@ -15,7 +15,7 @@ st.markdown("""
 <style>
 .stApp {
     background: radial-gradient(circle at center, #0c2d65 0%, #000000 90%);
-    color: white;
+    color: #c9d1d9;
     font-family: Consolas, monospace;
 }
 h1,h2,h3 { color:#60a5fa; }
