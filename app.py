@@ -18,7 +18,7 @@ st.markdown("""
     color: #c9d1d9;
     font-family: Consolas, monospace;
 }
-h1,h2,h3 { color:#60a5fa; }
+h1,h2,h3 { color:white; }
 </style>
 """, unsafe_allow_html=True)
 
