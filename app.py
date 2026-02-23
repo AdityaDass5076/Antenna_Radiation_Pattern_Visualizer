@@ -15,10 +15,10 @@ st.markdown("""
 <style>
 .stApp {
     background: radial-gradient(circle at center, #0c2d65 0%, #000000 90%);
-    color: #c9d1d9;
+    color: white;
     font-family: Consolas, monospace;
 }
-h1,h2,h3 { color:white; }
+h1,h2,h3 { color:#60a5fa; }
 </style>
 """, unsafe_allow_html=True)
 
